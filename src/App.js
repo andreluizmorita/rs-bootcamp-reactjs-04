@@ -1,10 +1,13 @@
-import React, { Component } from "react";
-import "./App.css";
+import React from "react";
+import { Provider } from "react-redux";
 
-class App extends Component {
-  render() {
-    return <div className="App">Start Redux and Reactotron</div>;
-  }
-}
+import "./config/reactotron";
+import store from "./store";
+
+const App = () => (
+  <Provider store={store}>
+    <div className="App">Start Redux and Reactotron</div>
+  </Provider>
+);
 
 export default App;
