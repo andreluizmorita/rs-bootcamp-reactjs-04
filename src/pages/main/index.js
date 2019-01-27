@@ -1,5 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
-const Main = () => <h1>Main</h1>;
+import Sidebar from '../../components/Sidebar';
+
+const Main = () => (
+  <Fragment>
+    <Sidebar />
+  </Fragment>
+);
 
 export default Main;
