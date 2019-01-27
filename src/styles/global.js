@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    text-render: optimizeLegibility !important;
+    text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     background: #181818;
     font-family: 'Montserrat', sans-serif;
