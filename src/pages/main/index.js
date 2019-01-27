@@ -1,11 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
+import { Wrapper, Container } from '../../styles/components';
 import Sidebar from '../../components/Sidebar';
+import Player from '../../components/Player';
 
 const Main = () => (
-  <Fragment>
-    <Sidebar />
-  </Fragment>
+  <Wrapper>
+    <Container>
+      <Sidebar />
+    </Container>
+    <Player />
+  </Wrapper>
 );
 
 export default Main;
