@@ -9,13 +9,13 @@ const INITIAL_STATE = {
 };
 
 export default function playlists(state = INITIAL_STATE, action) {
-  switch (action.Types) {
+  switch (action.type) {
     case Types.GET_REQUEST:
       return { ...state, loading: true };
     case Types.GET_SUCCESS:
       return { ...state, loading: true, data: action.payload.data };
     default:
-      break;
+      return state;
   }
 }
 
