@@ -7,7 +7,7 @@ const Browse = () => (
     <Title>Navegar</Title>
 
     <List>
-      <Playlist href="">
+      <Playlist to="/playlists/1">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/3/35/FooFightersGreatestHits.jpg"
           alt="Playlist"
@@ -19,7 +19,7 @@ const Browse = () => (
         </p>
       </Playlist>
 
-      <Playlist href="">
+      <Playlist to="/playlists/1">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/3/35/FooFightersGreatestHits.jpg"
           alt="Playlist"
@@ -31,7 +31,7 @@ const Browse = () => (
         </p>
       </Playlist>
 
-      <Playlist href="">
+      <Playlist to="/playlists/1">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/3/35/FooFightersGreatestHits.jpg"
           alt="Playlist"
@@ -43,7 +43,7 @@ const Browse = () => (
         </p>
       </Playlist>
 
-      <Playlist href="">
+      <Playlist to="/playlists/1">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/3/35/FooFightersGreatestHits.jpg"
           alt="Playlist"
@@ -55,7 +55,7 @@ const Browse = () => (
         </p>
       </Playlist>
 
-      <Playlist href="">
+      <Playlist to="/playlists/1">
         <img
           src="https://upload.wikimedia.org/wikipedia/en/3/35/FooFightersGreatestHits.jpg"
           alt="Playlist"
