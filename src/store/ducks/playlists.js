@@ -5,7 +5,7 @@ export const Types = {
 
 const INITIAL_STATE = {
   data: [],
-  loadign: false
+  loading: false
 };
 
 export default function playlists(state = INITIAL_STATE, action) {
@@ -13,7 +13,7 @@ export default function playlists(state = INITIAL_STATE, action) {
     case Types.GET_REQUEST:
       return { ...state, loading: true };
     case Types.GET_SUCCESS:
-      return { ...state, loading: true, data: action.payload.data };
+      return { ...state, loading: false, data: action.payload.data };
     default:
       return state;
   }
