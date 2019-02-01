@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
     "prop-types": "^15.6.2",
     "rc-slider": "^8.6.4",
     "react": "^16.7.0",
@@ -28,7 +29,8 @@
     "quick": "concurrently \"npm run backend\" \"npm start\"",
     "cypress": "npx cypress open",
     "e2e": "concurrently \"npm run quick\" \"npm run cypress\"",
-    "backend": "json-server --watch db.json --routes routes.json --port 8627 --middlewares ./node_modules/json-server-reset"
+    "backend": "json-server --watch db.json --routes routes.json --port 8627 --middlewares ./node_modules/json-server-reset",
+    "backend2": "json-server server.json -p 3001 -w -d 500"
   },
   "lint-staged": {
     "*.{js,jsx}": [

@@ -21,11 +21,11 @@ export default function playlists(state = INITIAL_STATE, action) {
 
 export const Creators = {
   getPlaylistsRequest: () => ({
-    type: TypeError.GET_REQUEST
+    type: Types.GET_REQUEST
   }),
 
   getPlaylistsSuccess: data => ({
-    type: TypeError.GET_SUCCESS,
+    type: Types.GET_SUCCESS,
     payload: { data }
   })
 };
