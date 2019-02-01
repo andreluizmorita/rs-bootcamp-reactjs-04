@@ -6,6 +6,7 @@ import './config/reactotron';
 import GlobalStyle from './styles/global';
 
 import { Wrapper, Container, Content } from './styles/components';
+import ErrorBox from './components/Error';
 import Sidebar from './components/Sidebar';
 import Player from './components/Player';
 import Header from './components/Header';
@@ -21,6 +22,7 @@ const App = () => (
         <Container>
           <Sidebar />
           <Content>
+            <ErrorBox />
             <Header />
             <Routes />
           </Content>
