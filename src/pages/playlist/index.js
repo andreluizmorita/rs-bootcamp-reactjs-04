@@ -23,7 +23,7 @@ class Playlist extends Component {
     }).isRequired,
     getPlaylistDetailsRequest: PropTypes.func.isRequired,
     playlistDetails: PropTypes.shape({
-      data: PropTypes.shape({
+      playlist: PropTypes.shape({
         thumbnail: PropTypes.string,
         title: PropTypes.string,
         description: PropTypes.string,
@@ -78,7 +78,7 @@ class Playlist extends Component {
 
   renderDetails = () => {
     const {
-      playlistDetails: { data },
+      playlistDetails: { playlist },
       loadSong,
       selectSong,
       currentSong
@@ -89,12 +89,12 @@ class Playlist extends Component {
     return (
       <Container>
         <Header>
-          <img src={data.thumbnail} alt={data.title} />
+          <img src={playlist.thumbnail} alt={playlist.title} />
 
           <div>
             <span>Playlist</span>
-            <h1>{data.title}</h1>
-            {!!data.songs && <p>{data.songs.length} músicas</p>}
+            <h1>{playlist.title}</h1>
+            {!!playlist.songs && <p>{playlist.songs.length} músicas</p>}
             <button type="button">Play</button>
           </div>
         </Header>
@@ -112,16 +112,16 @@ class Playlist extends Component {
             </tr>
           </thead>
           <tbody>
-            {!data.songs ? (
+            {!playlist.songs ? (
               <tr>
                 <td colSpan={5}>Nenhuma música cadastrad</td>
               </tr>
             ) : (
-              data.songs.map(song => (
+              playlist.songs.map(song => (
                 <SongItem
                   key={song.id}
-                  onClick={() => selectSong(song)}
-                  onDoubleClick={() => loadSong(song)}
+                  onClick={() => selectSong(song, playlist.songs)}
+                  onDoubleClick={() => loadSong(song, playlist.songs)}
                   selected={selectedSong === song.id}
                   playing={currentSong && currentSong.id === song.id}
                 >
