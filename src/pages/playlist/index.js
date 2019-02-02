@@ -80,6 +80,7 @@ class Playlist extends Component {
     const {
       playlistDetails: { data },
       loadSong,
+      selectSong,
       currentSong
     } = this.props;
 
@@ -119,7 +120,7 @@ class Playlist extends Component {
               data.songs.map(song => (
                 <SongItem
                   key={song.id}
-                  onClick={() => this.setState({ selectedSong: song.id })}
+                  onClick={() => selectSong(song)}
                   onDoubleClick={() => loadSong(song)}
                   selected={selectedSong === song.id}
                   playing={currentSong && currentSong.id === song.id}

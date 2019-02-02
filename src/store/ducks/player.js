@@ -3,7 +3,8 @@ import Sound from 'react-sound';
 export const Types = {
   LOAD: 'player/LOAD',
   PLAY: 'player/PLAY',
-  PAUSE: 'player/PAUSE'
+  PAUSE: 'player/PAUSE',
+  SELECT: 'player/SELECT'
 };
 
 const INITIAL_STATE = {
@@ -25,9 +26,14 @@ export default function player(state = INITIAL_STATE, action) {
         status: Sound.status.PLAYING
       };
     case Types.PAUSE:
-      console.log('PAUSED');
       return {
         ...state,
+        status: Sound.status.PAUSED
+      };
+    case Types.SELECT:
+      return {
+        ...state,
+        currentSong: action.payload.song,
         status: Sound.status.PAUSED
       };
     default:
@@ -38,6 +44,11 @@ export default function player(state = INITIAL_STATE, action) {
 export const Creators = {
   loadSong: song => ({
     type: Types.LOAD,
+    payload: { song }
+  }),
+
+  selectSong: song => ({
+    type: Types.SELECT,
     payload: { song }
   }),
 
