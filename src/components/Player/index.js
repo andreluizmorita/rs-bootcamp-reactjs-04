@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Creators as PlayerActions } from '../../store/ducks/error';
+import { Creators as PlayerActions } from '../../store/ducks/player';
 
 import {
   Container,
@@ -63,7 +63,6 @@ const Player = ({ player, play, pause }) => (
             <img src={PlayIcon} alt="Play" />
           </button>
         )}
-
         <button type="button">
           <img src={Forwardcon} alt="Forward" />
         </button>
