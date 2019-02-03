@@ -37,7 +37,8 @@ const Player = ({
   duration,
   handlePosition,
   setPosition,
-  progress
+  progress,
+  setVolume
 }) => (
   <Container>
     {!!player.currentSong && (
@@ -47,6 +48,7 @@ const Player = ({
         onFinishedPlaying={next}
         onPlaying={playing}
         position={player.position}
+        volume={player.volume}
       />
     )}
 
@@ -113,7 +115,8 @@ const Player = ({
         railStyle={{ background: '#404040', borderRadius: 10 }}
         trackStyle={{ background: '#FFF' }}
         handleStyle={{ display: 'none' }}
-        value={20}
+        value={player.volume}
+        onChange={setVolume}
       />
     </Volume>
   </Container>
@@ -138,6 +141,7 @@ Player.propTypes = {
   duration: PropTypes.string.isRequired,
   handlePosition: PropTypes.func.isRequired,
   setPosition: PropTypes.func.isRequired,
+  setVolume: PropTypes.func.isRequired,
   progress: PropTypes.number.isRequired
 };
 
